@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Andrei Asipchuk](https://up.htmlacademy.ru/adaptive/16/user/897455).
-* Наставник: `Неизвестно`.
+* Наставник: [Vladislav Krivokora](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
