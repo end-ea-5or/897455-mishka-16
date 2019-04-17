@@ -1,0 +1,45 @@
+//убрать стили у списков
+.no-ulstyle() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//убрать стили у ссылок
+.no-linkstyle() {
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+//убрать отступы
+.no-indent() {
+  margin: 0;
+  padding: 0;
+}
+
+//центровщик
+.wrapper() {
+  min-width: 320px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+  }
+}
+
+//стиль placeholder-а
+.placeholder-style() {
+  opacity: 0.3;
+  font-size: 17px;
+  line-height: 18px;
+}
