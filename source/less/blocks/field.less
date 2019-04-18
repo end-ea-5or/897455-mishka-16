@@ -1,0 +1,56 @@
+.field {
+  border: none;
+
+  &__legend {
+    color: @aqua;
+    font-family: @font700;
+    font-size: 17px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    .no-ulstyle;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    padding-bottom: 10px;
+  }
+
+  &__label {
+    color: @black;
+    font-family: @font700;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  &__area {
+    box-shadow: inset 0 -2px 0 #000000;
+    border: 2px solid #444444;
+    overflow: hidden;
+
+    &::-webkit-input-placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &__input {
+    border: none;
+    box-shadow: inset 0 -2px 0 #000000;
+
+    &::-webkit-input-placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &__data {
+    border: none;
+    box-shadow: inset 0 -2px 0 #000000;
+
+    &::-webkit-input-placeholder {
+      .placeholder-style;
+    }
+  }
+}

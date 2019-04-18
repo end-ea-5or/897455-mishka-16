@@ -1,0 +1,55 @@
+.catalog {
+  padding-top: 30px;
+
+  &__list {
+    .no-ulstyle;
+  }
+
+  &__item {
+    border: 1px solid @gray;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    .no-linkstyle;
+    color: @black;
+    font-family: @font700;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__title {
+    .no-indent;
+  }
+
+  &__description {
+    .no-indent;
+    margin-top: 17px;
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  &__contain {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    &--top {
+      border-bottom: 1px solid @gray;
+    }
+  }
+
+  &__price {
+    color: @black;
+    font-family: @font700;
+    line-height: 24px;
+  }
+
+  &__basket {
+    display: block;
+    background-image: url("http://placehold.it/20x19");
+    width: 20px;
+    height: 19px;
+  }
+}
