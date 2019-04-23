@@ -1,43 +1,109 @@
 .contacts {
+  position: relative;
   margin-top: 40px;
   padding-bottom: 39px;
 
-  &__title {
+  @media @tablet-width {
+    padding-bottom: 57px;
+  }
+
+  @media @desktop-width {
+    padding-bottom: 105px;
+  }
+}
+
+.contacts__title {
+  .no-indent;
+  .wrapper;
+  color: @black;
+  font-family: @font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+
+  @media @tablet-width {
+    margin-top: 71px;
+    max-width: 570px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media @desktop-width {
+    margin-top: 150px;
+    margin-left: 270px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.contacts__contain {
+  .wrapper;
+
+  @media @tablet-width {
+    display: flex;
+    margin-top: 65px;
+  }
+
+  @media @desktop-width {
+    flex-direction: column;
+    margin-left: 175px;
+    width: 30%;
+  }
+}
+
+.contacts__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts td {
+  padding-bottom: 40px;
+  text-align: left;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+.contacts__first {
+  width: 25%;
+}
+
+.contacts__emale {
+  .no-linkstyle;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__map {
+  margin-top: 40px;
+  width: 322px;
+  height: 457px;
+
+  @media @tablet-width {
+    width: 100%;
+  }
+
+  @media @desktop-width {
     .no-indent;
-    color: @black;
-    font-family: @font700;
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  &__table {
-    border-collapse: collapse;
-
-    & td {
-      text-align: left;
-      line-height: 30px;
-    }
-  }
-
-  &__column1 {
-    width: 25%;
-  }
-
-  &__emale {
-    .no-linkstyle;
-  }
-
-  &__address {
-    font-style: normal;
-  }
-
-  &__map {
-    margin-top: 40px;
-    width: 322px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 525px;
     height: 457px;
   }
+}
 
-  &__button {
-    margin-top: 39px;
+.contacts__button {
+  margin-top: 39px;
+
+  @media @tablet-width {
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+  }
+
+  @media @desktop-width {
+    margin-left: 175px;
   }
 }

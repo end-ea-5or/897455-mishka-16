@@ -1,6 +1,33 @@
 .page-logo {
-  &__img {
-    width: 86px;
-    height: 35px;
+  margin: 23px auto;
+
+  @media @tablet-width {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 50px;
+    margin-right: 210px;
   }
+
+  @media @desktop-width {
+    .no-indent;
+    margin: 0 auto;
+  }
+
+  &--catalog {
+    order: -1;
+  }
+
+  &--footer {
+    display: none;
+
+    @media @tablet-width {
+      .no-indent;
+      display: block;
+    }
+  }
+}
+
+.page-logo__img {
+  width: 86px;
+  height: 35px;
 }

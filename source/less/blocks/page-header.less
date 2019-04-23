@@ -1,20 +1,45 @@
 .page-header {
-  &__title {
-    .no-indent;
-    .wrapper;
-    color: #010000;
-    font-family: @font700;
-    font-size: 27px;
-    font-weight: 700;
-    text-align: center;
+  //height: 884px; // для сетки
+  display: flex;
+  flex-direction: column;
+}
 
-    &--gray {
-      margin-bottom: 56px;
+.page-header__contain-logo {
+  background-color: @white;
+}
+
+.page-header__title {
+  .no-indent;
+  .wrapper;
+  color: #010000;
+  font-family: @font;
+  font-weight: 700;
+  font-size: 27px;
+  text-align: center;
+  vertical-align: middle;
+  order: 1;
+
+  &--catalog {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: @gray-light;
+
+    @media @tablet-width {
+      padding-top: 100px;
+    }
+
+    @media @desktop-width {
+      width: 100%;
+      padding-bottom: 100px;
     }
   }
+}
 
-  &--gray {
-    padding-top: 76px;
-    background-color: @gray-light;
+.page-header__text {
+  display: none;
+
+  @media @tablet-width {
+    display: inline-block;
+    margin-left: auto;
   }
 }

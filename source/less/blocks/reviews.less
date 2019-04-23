@@ -1,50 +1,104 @@
 .reviews {
+  .wrapper;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin-top: 60px;
   padding-bottom: 36px;
   border-bottom: 1px solid @gray-light;
+}
 
-  &__title {
-    .no-indent;
-    color: @black;
-    font-family: @font700;
-    font-size: 25px;
-    line-height: 30px;
+.reviews__contain {
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet-width {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 65px;
   }
 
-  &__item {
-    .no-indent;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  @media @desktop-width {
+    margin-top: 50px;
+  }
+}
+
+.reviews__cursor-contain {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+
+  @media @tablet-width {
+    width: 25%;
   }
 
-  &__text {
-    line-height: 30px;
+  @media @desktop-width {
+    width: 17%;
   }
+}
 
-  &__author-name {
-    margin-bottom: 35px;
-    font-family: @font700;
-    font-style: normal;
-    font-size: 17px;
-    color: @black;
-    line-height: 24px;
+.reviews__title {
+  .no-indent;
+  color: @black;
+  font-family: @font;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+
+  @media @tablet-width {
+    display: block;
+    max-width: 480px;
+    margin-top: 80px;
+    font-size: 43px;
+    line-height: 50px;
   }
+}
 
-  &__author-address {
-    margin-top: 10px;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 30px;
+.reviews__item {
+  .no-indent;
+  margin-top: 30px;
+}
+
+.reviews__text {
+  line-height: 30px;
+
+  @media @tablet-width {
+    margin-top: 65px;
   }
+}
 
-  &__cursor {
-    display: inline-block;
-    width: 130px;
-    height: 52px;
-    background-image: url("http://placehold.it/130x52");
-  }
+.reviews__author-name {
+  margin-top: 30px;
+  font-family: @font;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  color: @black;
+  line-height: 24px;
+}
 
-  &__button {
-    margin-top: 38px;
+.reviews__author-address {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.reviews__cursor {
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  background-image: url("http://placehold.it/50x26");
+}
+
+.reviews__button {
+  margin-top: 38px;
+
+  @media @tablet-width {
+    position: absolute;
+    top: 50px;
+    right: 0;
   }
 }

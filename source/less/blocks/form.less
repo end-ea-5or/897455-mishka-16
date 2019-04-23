@@ -1,20 +1,47 @@
 .form {
   padding-bottom: 55px;
+}
 
-  &__text {
-    .no-indent;
-    padding-bottom: 30px;
-    width: 100%;
-    font-size: 13px;
-    line-height: 24px;
+.form-contain {
+  .wrapper;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-    &--bottom {
-      font-size: 14px;
-      line-height: 16px;
+  &--gray {
+    @media @tablet-width {
+      background-color: @gray-light;
     }
   }
 
-  &__button {
-    background-color: transparent;
+  &--bottom {
+    .wrapper;
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet-width {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+}
+
+.form__text {
+  .no-indent;
+  .wrapper;
+  padding-bottom: 30px;
+  font-size: 13px;
+  line-height: 24px;
+
+  &--bottom {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.form__button {
+  background-color: transparent;
+
+  @media @desktop-width {
+    border: none;
   }
 }

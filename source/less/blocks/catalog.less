@@ -1,55 +1,111 @@
 .catalog {
+  .wrapper;
+  display: flex;
+  flex-direction: column;
   padding-top: 30px;
+}
 
-  &__list {
-    .no-ulstyle;
+.catalog__contain {
+  @media @tablet-width {
+    width: 50%;
   }
 
-  &__item {
-    border: 1px solid @gray;
-    margin-bottom: 30px;
+  @media @desktop-width {
+    width: auto;
+  }
+}
+
+.catalog__contain-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  &--top {
+    flex-direction: column;
+    border-bottom: 1px solid @gray;
+  }
+}
+
+.catalog__list {
+  .no-ulstyle;
+
+  @media @desktop-width {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid @gray;
+  margin-bottom: 30px;
+
+  @media @tablet-width {
+    flex-direction: row;
   }
 
-  &__link {
-    .no-linkstyle;
-    color: @black;
-    font-family: @font700;
-    font-size: 17px;
-    line-height: 24px;
+  @media @desktop-width {
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+    margin-right: 50px;
   }
 
-  &__title {
-    .no-indent;
-  }
-
-  &__description {
-    .no-indent;
-    margin-top: 17px;
-    font-size: 13px;
-    line-height: 30px;
-  }
-
-  &__contain {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-
-    &--top {
-      border-bottom: 1px solid @gray;
+  &--last {
+    @media @desktop-width {
+      margin-right: 0;
     }
   }
+}
 
-  &__price {
-    color: @black;
-    font-family: @font700;
-    line-height: 24px;
+.catalog__link-title {
+  .no-linkstyle;
+  color: @black;
+  font-family: @font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.catalog__link-img {
+  .no-linkstyle;
+
+  @media @tablet-width {
+    width: 50%;
   }
 
-  &__basket {
-    display: block;
-    background-image: url("http://placehold.it/20x19");
-    width: 20px;
-    height: 19px;
+  @media @desktop-width {
+    width: 316px;
+    height: 462px;
   }
+}
+
+.catalog__title {
+  .no-indent;
+}
+
+.catalog__description {
+  .no-indent;
+  margin-top: 17px;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.catalog__price {
+  .no-indent;
+  color: @black;
+  font-family: @font;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.catalog__basket {
+  display: block;
+  background-image: url("http://placehold.it/20x19");
+  width: 20px;
+  height: 19px;
 }
