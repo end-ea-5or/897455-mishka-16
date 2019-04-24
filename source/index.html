@@ -11,28 +11,38 @@
 <body>
   <header class="page-header">
     <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
-    <a class="page-logo" href="#">
-      <img class="page-logo__img" src="http://placehold.it/86x35" alt="Милые штуки ручной работы для дома" width="86"
-        height="35">
-    </a>
-    <button class="main-nav__toggle button-burger" type="button">Открыть меню</button>
+      <a class="page-logo" href="#">
+        <img class="page-logo__img" src="http://placehold.it/86x35" alt="Милые штуки ручной работы для дома" width="86"
+          height="35">
+      </a>
+    <button class="main-nav__toggle button-burger" type="button"><span class="visually-hidden">Открыть
+        меню</span></button>
     <nav class="main-nav">
-      <ul class="main-nav__list  site-list">
-        <li class="main-nav__item  site-list__item">
+      <ul class="main-nav__list ">
+        <li class="main-nav__item  main-nav__item--first">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item  site-list__item">
+        <li class="main-nav__item  main-nav__item--second">
           <a class="main-nav__link" href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item  site-list__item">
+        <li class="main-nav__item  main-nav__item--third">
           <label class="main-nav__search" for="search-form">Поиск по сайту</label>
           <input class="visually-hidden" type="search" id="search-form">
         </li>
-        <li class="main-nav__item  site-list__item">
+        <li class="main-nav__item  main-nav__item--fourth">
           <a class="main-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="main-nav__list  main-nav__list--second">
+        <li class="main-nav__item  main-nav__item--fifth">
+          <a class="main-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item  main-nav__item--sixth">
+          <a class="main-nav__link" href="#">Распродажа</a>
+        </li>
+      </ul>
     </nav>
+    <span class="page-header__text">Бесплатная доставка по России</span>
     <nav class="site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__item">
@@ -47,68 +57,88 @@
 
   <main class="page-main">
     <section class="product-week">
-      <h2 class="product-week__title">Товар недели</h2>
-      <h3 class="product-week__name">Вязаные корзинки</h3>
-      <p class="product-week__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="product-week__properties">
-        <tr>
-          <td>Цвет:</td>
-          <td>«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td>Диаметр:</td>
-          <td>25 см</td>
-        </tr>
-        <tr>
-          <td>Высота:</td>
-          <td>15 см</td>
-        </tr>
-      </table>
-      <img class="product-week__img" src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260" height="315">
-      <span class="product-week__price">Цена: 990 руб.</span>
-      <a class="product-week__button  button" href="#">Заказать</a>
+      <div class="product-week__contain  product-week__contain--first">
+        <h2 class="product-week__title">Товар недели</h2>
+        <h3 class="product-week__name">Вязаные корзинки</h3>
+      </div>
+      <div class="product-week__contain  product-week__contain--second">
+        <p class="product-week__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+          размерах.</p>
+        <table class="product-week__properties">
+          <tr>
+            <td>Цвет:</td>
+            <td>«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td>Диаметр:</td>
+            <td>25 см</td>
+          </tr>
+          <tr>
+            <td>Высота:</td>
+            <td>15 см</td>
+          </tr>
+        </table>
+        <span class="product-week__price">Цена: 990 руб.</span>
+        <a class="product-week__button  button" href="#">Заказать</a>
+        <img class="product-week__img" src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260"
+          height="315">
+      </div>
     </section>
     <section class="about">
       <h2 class="about__title">Коротко о нас</h2>
-      <ul class="about__list">
-        <li class="about__item">Экологически чистые материалы</li>
-        <li class="about__item">Скандинавский стиль по российской цене</li>
-        <li class="about__item">Увеличивает лайки на фотографиях</li>
-        <li class="about__item">Связано вручную с любовью и умилением</li>
-        <li class="about__item">Поддержка отечественного производителя</li>
-        <li class="about__item">Поставляется в подарочной упаковке</li>
-      </ul>
+      <div class="about__contain">
+        <ul class="about__list">
+          <li class="about__item">Экологически чистые материалы</li>
+          <li class="about__item">Скандинавский стиль по российской цене</li>
+          <li class="about__item">Увеличивает лайки на фотографиях</li>
+        </ul>
+        <ul class="about__list  about__list--second">
+          <li class="about__item">Связано вручную с любовью и умилением</li>
+          <li class="about__item">Поддержка отечественного производителя</li>
+          <li class="about__item">Поставляется в подарочной упаковке</li>
+        </ul>
+      </div>
     </section>
     <section class="reviews">
       <h2 class="reviews__title">Отзывы</h2>
       <blockquote class="reviews__item">
-        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+          лайков,
           как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
           стали более стильными, а также набирают больше лайков!</p>
-        <cite class="reviews__author-name">Анастасия Красильникова</cite>
-        <cite class="reviews__author-address">@misssssiskras</cite>
       </blockquote>
-      <a href="#" class="reviews__cursor"></a>
-      <a href="#" class="reviews__cursor  reviews__cursor--rigth"></a>
+      <div class="reviews__contain">
+        <div class="reviews__autor-contain">
+          <cite class="reviews__author-name">Анастасия Красильникова</cite>
+          <cite class="reviews__author-address">@misssssiskras</cite>
+        </div>
+        <div class="reviews__cursor-contain">
+          <a href="#" class="reviews__cursor"></a>
+          <a href="#" class="reviews__cursor  reviews__cursor--rigth"></a>
+        </div>
+      </div>
       <a class="reviews__button  button" href="#">Написать</a>
     </section>
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <table class="contacts__table">
-        <tr>
-          <td class="contacts__column1">e-mail:</td>
-          <td>
-            <a class="contacts__emale" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="contacts__column1">адрес:</td>
-          <td>
-            <address class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</address>
-          </td>
-        </tr>
-      </table>
+      <div class="contacts__contain">
+        <table class="contacts__table">
+          <tr>
+            <td class="contacts__first">e-mail:</td>
+            <td>
+              <a class="contacts__emale" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </td>
+          </tr>
+        </table>
+        <table class="contacts__table  contacts__table--second">
+          <tr>
+            <td class="contacts__first">адрес:</td>
+            <td>
+              <address class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</address>
+            </td>
+          </tr>
+        </table>
+      </div>
       <img class="contacts__map map" src="http://placehold.it/322x457" alt="Карта, как нас найти" width="322"
         height="457">
       <a class="contacts__button  button" href="#">Напишите нам</a>
@@ -116,22 +146,30 @@
   </main>
 
   <footer class="page-footer">
+    <a class="page-logo  page-logo--footer" href="#">
+      <img class="page-logo__img" src="http://placehold.it/86x35" alt="Милые штуки ручной работы для дома" width="86"
+        height="35">
+    </a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--ins" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в инстаграме</span></a>
+          <a class="social__link social__link--ins" href="https://www.instagram.com/htmlacademy"><span
+              class="visually-hidden">Мы в инстаграме</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в фейсбуке</span></a>
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"><span
+              class="visually-hidden">Мы в фейсбуке</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--tw" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Мы в твиттере</span></a>
+          <a class="social__link social__link--tw" href="https://twitter.com/htmlacademy_ru"><span
+              class="visually-hidden">Мы в твиттере</span></a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright  copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
+          Academy</span></a>
     </div>
   </footer>
 </body>

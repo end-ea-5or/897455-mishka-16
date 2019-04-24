@@ -1,25 +1,42 @@
 .site-nav {
-  &__list {
-    .no-ulstyle;
-  }
+  order: 2;
+  margin-top: auto;
+}
 
-  &__item {
+.site-nav__list {
+  .no-ulstyle;
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet-width {
     .wrapper;
-    background-color: @aqua;
+    flex-direction: row;
+  }
+}
 
-    &--second {
-      background-color: @aqua-dark;
-    }
+.site-nav__item {
+  .wrapper;
+  width: 100%;
+  background-color: @aqua;
+
+  @media @tablet-width {
+    .no-indent;
+    height: 120px;   // для сетки
   }
 
-  &__link {
-    .no-linkstyle;
-    display: inline-block;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-family: @font700;
-    color: #ffffff;
-    font-size: 19px;
-    line-height: 24px;
+  &--second {
+    background-color: @aqua-dark;
   }
+}
+
+.site-nav__link {
+  .no-linkstyle;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: @font;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 24px;
 }
