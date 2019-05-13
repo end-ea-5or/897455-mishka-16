@@ -237,8 +237,6 @@
     padding-left: 18px;
   }
 
-
-
   &::-webkit-input-placeholder {
     .placeholder-style;
   }
@@ -255,7 +253,7 @@
   }
 }
 
-.field__input--circle+label::before {
+.field__input--circle + label::before {
   content: "";
   position: absolute;
   top: -11px;
@@ -267,7 +265,7 @@
   background-color: @white;
 }
 
-.field__input--circle:checked+label::after {
+.field__input--circle:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -278,7 +276,7 @@
   border-radius: 50%;
 }
 
-.field__input--square+label::before {
+.field__input--square + label::before {
   content: "";
   position: absolute;
   top: -11px;
@@ -293,7 +291,7 @@
   }
 }
 
-.field__input--square:checked+label::after {
+.field__input--square:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
