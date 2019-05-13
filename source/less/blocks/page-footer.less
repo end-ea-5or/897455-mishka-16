@@ -1,36 +1,22 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
   background-color: @gray-light;
   color: @black;
   font-family: @font;
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+}
+
+.page-footer__contain {
+  .wrapper;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
 
   @media @tablet-width {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 51px;
+    padding-top: 50px;
     padding-bottom: 58px;
-  }
-}
-
-.page-footer__social {
-  padding-bottom: 30px;
-  border-bottom: 1px solid @gray;
-
-  @media @tablet-width {
-    .no-indent;
-  }
-}
-
-.page-footer__copyright {
-  margin-top: 25px;
-  padding-bottom: 25px;
-
-  @media @tablet-width {
-    .no-indent;
   }
 }

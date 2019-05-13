@@ -1,11 +1,16 @@
 .button {
   .no-linkstyle;
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border: 2px solid @gray-dark;
   font-family: @font;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+
+  @media @tablet-width {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

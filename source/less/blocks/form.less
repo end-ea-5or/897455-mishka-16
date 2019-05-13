@@ -1,20 +1,19 @@
 .form {
-  padding-bottom: 55px;
+  padding-bottom: 20px;
 }
 
 .form-contain {
   .wrapper;
-  padding-top: 50px;
-  padding-bottom: 50px;
 
   &--gray {
     @media @tablet-width {
+      max-width: none;
       background-color: @gray-light;
+      border-top: 1px solid transparent; //чтобы не схлоппывались маргины
     }
   }
 
   &--bottom {
-    .wrapper;
     display: flex;
     flex-direction: column;
 
@@ -22,26 +21,57 @@
       flex-direction: row-reverse;
       justify-content: space-between;
     }
+
+    @media @desktop-width {
+      margin-left: 185px;
+    }
   }
 }
 
 .form__text {
   .no-indent;
-  .wrapper;
   padding-bottom: 30px;
   font-size: 13px;
   line-height: 24px;
 
+  @media @tablet-width {
+    .no-indent;
+    margin-top: 68px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media @desktop-width {
+    margin-top: 112px;
+    margin-left: 175px;
+    margin-right: 193px;
+  }
+
   &--bottom {
+    margin-top: 18px;
     font-size: 14px;
     line-height: 16px;
+
+    @media @tablet-width {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    @media @desktop-width {
+      margin-left: 0;
+      margin-right: 150px;
+    }
   }
 }
 
 .form__button {
+  margin-bottom: 55px;
+  font-size: 17px;
+  line-height: 16px;
   background-color: transparent;
 
-  @media @desktop-width {
-    border: none;
+  @media @tablet-width {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
