@@ -1,8 +1,11 @@
 .catalog {
-  .wrapper;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+
+  @media @desktop-width {
+    padding-top: 80px;
+  }
 }
 
 .catalog__contain {
@@ -71,11 +74,12 @@
   line-height: 24px;
 }
 
-.catalog__link-img {
+.catalog__link-img img {
   .no-linkstyle;
 
   @media @tablet-width {
-    width: 50%;
+    width: 334px;
+    height: 334px;
   }
 
   @media @desktop-width {
@@ -86,6 +90,13 @@
 
 .catalog__title {
   .no-indent;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media @tablet-width {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog__description {
@@ -93,6 +104,11 @@
   margin-top: 17px;
   font-size: 13px;
   line-height: 30px;
+
+  @media @tablet-width {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .catalog__price {
@@ -101,11 +117,17 @@
   font-family: @font;
   font-weight: 700;
   line-height: 24px;
+
+  @media @tablet-width {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 .catalog__basket {
   display: block;
-  background-image: url("http://placehold.it/20x19");
+  background-image: url("../../img/icon-cart.svg");
+  opacity: 0.2;
   width: 20px;
   height: 19px;
 }

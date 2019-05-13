@@ -1,7 +1,6 @@
 .product-week {
-  .wrapper;
-  border-bottom: 1px solid @gray-light;
-  padding-bottom: 36px;
+  margin-top: 60px;
+  padding-bottom: 73px;
 }
 
 .product-week__contain {
@@ -11,6 +10,12 @@
   &--first {
     @media @tablet-width {
       flex-direction: row;
+      margin-bottom: 55px;
+    }
+
+
+    @media @desktop-width {
+      margin-top: 110px;
     }
   }
 
@@ -21,7 +26,8 @@
     }
 
     @media @desktop-width {
-      margin-left: 17%;
+      margin-left: 175px;
+      max-height: 650px;
     }
   }
 }
@@ -35,8 +41,18 @@
   font-size: 17px;
   color: @aqua;
 
+  @media @tablet-width {
+    align-self: center;
+    margin-right: 30px;
+    width: 100px;
+    line-height: 17px;
+    text-align: center;
+  }
+
   @media @desktop-width {
     order: 0;
+    margin-right: 0;
+    margin-left: 40px;
   }
 }
 
@@ -53,6 +69,12 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media @desktop-width {
+    margin-left: 30px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .product-week__text {
@@ -61,7 +83,10 @@
   line-height: 24px;
 
   @media @tablet-width {
-    width: 50%;
+    margin-top: 0;
+    width: 43%;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media @desktop-width {
@@ -71,17 +96,18 @@
 
 .product-week__properties {
   .no-indent;
-  width: 100%;
   margin-top: 30px;
   line-height: 20px;
   border-collapse: collapse;
 
   @media @tablet-width {
-    width: 50%;
+    margin-top: 34px;
+    width: 43%;
   }
 
   @media @desktop-width {
     width: 33%;
+    margin-top: 60px;
   }
 }
 
@@ -93,8 +119,8 @@
 
 .product-week__img {
   margin-top: 30px;
-  width: 260px;
-  height: 315px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media @tablet-width {
     width: 333px;
@@ -102,8 +128,12 @@
   }
 
   @media @desktop-width {
+    .no-indent;
+    margin-top: -160px;
+    margin-left: 50px;
     width: 525px;
     height: 636px;
+    z-index: -1;
   }
 }
 
@@ -115,24 +145,30 @@
   font-size: 17px;
   line-height: 24px;
   order: 1;
+  text-align: center;
 
   @media @tablet-width {
+    margin-top: 50px;
     order: 0;
-    width: 50%;
+    width: 43%;
+    font-size: 20px;
   }
 
   @media @desktop-width {
     width: 33%;
+    margin-top: 95px;
   }
 }
 
 .product-week__button {
   margin-top: 30px;
+  font-size: 17px;
+  line-height: 20px;
   order: 1;
 
   @media @tablet-width {
     order: 0;
-    width: 50%;
+    width: 43%;
   }
 
   @media @desktop-width {

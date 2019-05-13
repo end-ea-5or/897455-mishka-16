@@ -8,13 +8,18 @@
   }
 
   @media @desktop-width {
+    //.wrapper;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 75px;
+    max-height: 635px;
     padding-bottom: 105px;
   }
 }
 
 .contacts__title {
   .no-indent;
-  .wrapper;
   color: @black;
   font-family: @font;
   font-weight: 700;
@@ -29,31 +34,65 @@
   }
 
   @media @desktop-width {
-    margin-top: 150px;
-    margin-left: 270px;
+    position: relative;
+    margin-top: 60px;
+    margin-left: 170px;
     font-size: 53px;
     line-height: 57px;
   }
-}
 
-.contacts__contain {
-  .wrapper;
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 53px;
+    width: 47px;
+    height: 81px;
+    background-image: url("../../img/icon-flag.svg");
 
-  @media @tablet-width {
-    display: flex;
-    margin-top: 65px;
-  }
+    @media @tablet-width {
+      display: block;
+    }
 
-  @media @desktop-width {
-    flex-direction: column;
-    margin-left: 175px;
-    width: 30%;
+    @media @desktop-width {
+      top: 0;
+      left: -100px;
+    }
   }
 }
 
 .contacts__table {
+  margin-top: 42px;
   width: 100%;
   border-collapse: collapse;
+
+  @media @tablet-width {
+    margin-top: 65px;
+    font-size: 17px;
+  }
+
+  @media @desktop-width {
+    margin-top: 45px;
+    margin-left: 170px;
+  }
+}
+
+.contacts__table tbody {
+  @media @tablet-width {
+    display: flex;
+  }
+
+  @media @desktop-width {
+    display: table;
+    width: 300px;
+  }
+}
+
+.contacts__table tr {
+  @media @tablet-width {
+    width: 47%;
+  }
 }
 
 .contacts td {
@@ -63,12 +102,21 @@
   vertical-align: top;
 }
 
-.contacts__first {
-  width: 25%;
+.contacts__first-cell {
+  width: 29%;
+
+  @media @tablet-width {
+    width: 25%;
+  }
+
+  @media @desktop-width {
+    padding-right: 20px;
+  }
 }
 
 .contacts__emale {
   .no-linkstyle;
+  border-bottom: 1px solid @aqua-line;
 }
 
 .contacts__address {
@@ -77,8 +125,6 @@
 
 .contacts__map {
   margin-top: 40px;
-  width: 322px;
-  height: 457px;
 
   @media @tablet-width {
     width: 100%;
@@ -86,16 +132,15 @@
 
   @media @desktop-width {
     .no-indent;
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 525px;
     height: 457px;
+    order: 2;
   }
 }
 
 .contacts__button {
   margin-top: 39px;
+  font-size: 18px;
 
   @media @tablet-width {
     margin-left: auto;
@@ -104,6 +149,6 @@
   }
 
   @media @desktop-width {
-    margin-left: 175px;
+    margin-left: 110px;
   }
 }

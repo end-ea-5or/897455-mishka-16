@@ -1,21 +1,29 @@
 .reviews {
-  .wrapper;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  padding-bottom: 36px;
-  border-bottom: 1px solid @gray-light;
+  margin-top: 80px;
+  padding-bottom: 45px;
+
+  @media @tablet-width {
+    padding-bottom: 121px;
+  }
+
+  @media @desktop-width {
+    margin-top: 90px;
+    padding-bottom: 169px;
+  }
 }
 
 .reviews__contain {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 
   @media @tablet-width {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 65px;
+    margin-top: 68px;
   }
 
   @media @desktop-width {
@@ -30,11 +38,31 @@
   width: 100%;
 
   @media @tablet-width {
+    margin-top: 0;
     width: 25%;
   }
 
   @media @desktop-width {
     width: 17%;
+  }
+}
+
+.reviews__cursor {
+  display: inline-block;
+  width: 50%;
+  height: 52px;
+  background-image: url("../../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ececec;
+
+  @media @tablet-width {
+    border: none;
+  }
+
+  &--rigth {
+    background-image: url("../../img/icon-right-arrow.svg");
+    border-left: none;
   }
 }
 
@@ -47,29 +75,58 @@
   line-height: 30px;
 
   @media @tablet-width {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    z-index: -1;
+    width: 350px;
+    height: 457px;
     display: block;
-    max-width: 480px;
-    margin-top: 80px;
+    padding-top: 85px;
+    padding-left: 50px;
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media @desktop-width {
+    padding-left: 210px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .reviews__item {
   .no-indent;
   margin-top: 30px;
+
+  @media @tablet-width {
+    margin-top: 180px;
+  }
 }
 
 .reviews__text {
+  .no-indent;
   line-height: 30px;
 
   @media @tablet-width {
-    margin-top: 65px;
+    font-size: 17px;
+  }
+
+  @media @desktop-width {
+    margin-left: 165px;
+    width: 76%;
+  }
+}
+
+.reviews__autor-contain {
+  @media @desktop-width {
+    margin-left: 165px;
   }
 }
 
 .reviews__author-name {
-  margin-top: 30px;
   font-family: @font;
   font-weight: 700;
   font-style: normal;
@@ -86,19 +143,15 @@
   line-height: 30px;
 }
 
-.reviews__cursor {
-  display: inline-block;
-  width: 50px;
-  height: 26px;
-  background-image: url("http://placehold.it/50x26");
-}
-
 .reviews__button {
   margin-top: 38px;
+  font-size: 18px;
 
   @media @tablet-width {
     position: absolute;
     top: 50px;
     right: 0;
+    padding-left: 41px;
+    padding-right: 41px;
   }
 }

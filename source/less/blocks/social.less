@@ -1,6 +1,13 @@
 .social {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @gray;
+
+  @media @tablet-width {
+    .no-indent;
+    margin-left: 100px;
+  }
 }
 
 .social__list {
@@ -10,7 +17,8 @@
 .social__item {
   display: inline-block;
   margin-left: 35px;
-  width: 35px;
-  height: 35px;
-  background-image: url("http://placehold.it/35x35");
+
+  &:first-of-type {
+    margin: 0;
+  }
 }

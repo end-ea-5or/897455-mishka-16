@@ -1,6 +1,12 @@
 .site-nav {
+  padding: 0;
   order: 2;
-  margin-top: auto;
+
+  @media @tablet-width {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -120px;
+  }
 }
 
 .site-nav__list {
@@ -9,34 +15,62 @@
   flex-direction: column;
 
   @media @tablet-width {
-    .wrapper;
     flex-direction: row;
   }
 }
 
 .site-nav__item {
-  .wrapper;
-  width: 100%;
+  position: relative;
   background-color: @aqua;
 
   @media @tablet-width {
     .no-indent;
-    height: 120px;   // для сетки
+    height: 120px; // для сетки
+    width: 50%;
   }
 
   &--second {
     background-color: @aqua-dark;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    width: 40px;
+    height: 62px;
+    opacity: 0.15;
+    background-image: url("../../img/icon-interior.svg");
+  }
+
+  &--second::after {
+    right: 27px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-toy.svg");
+  }
 }
 
-.site-nav__link {
+.site-nav__item a {
   .no-linkstyle;
-  display: inline-block;
+  display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 9%;
   font-family: @font;
   font-weight: 700;
   color: #ffffff;
   font-size: 19px;
   line-height: 24px;
+
+  @media @tablet-width {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.site-nav__item span {
+  display: block;
+  width: 120px;
 }

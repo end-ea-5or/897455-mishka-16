@@ -2,15 +2,19 @@
   margin: 23px auto;
 
   @media @tablet-width {
-    margin-top: 23px;
-    margin-bottom: 23px;
-    margin-left: 50px;
-    margin-right: 210px;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    background-color: @white;
+    border-bottom: 1px solid @gray-light;
   }
 
   @media @desktop-width {
     .no-indent;
-    margin: 0 auto;
+    margin: 9px auto;
+    z-index: 2;
+    border: none;
   }
 
   &--catalog {
@@ -23,11 +27,7 @@
     @media @tablet-width {
       .no-indent;
       display: block;
+      background-color: transparent;
     }
   }
-}
-
-.page-logo__img {
-  width: 86px;
-  height: 35px;
 }

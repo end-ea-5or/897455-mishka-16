@@ -1,6 +1,5 @@
 .main-nav {
   width: 100%;
-  background-color: @white;
 }
 
 .main-nav__list {
@@ -9,64 +8,91 @@
   flex-direction: column;
 
   @media @tablet-width {
-    .wrapper;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: -95px;
   }
 
-  &--second {
-    display: none;
-
-    @media @desktop-width {
-      display: flex;
-    }
+  @media @desktop-width {
+    margin-top: -62px;
   }
 }
 
 .main-nav__item {
-  padding-top: 32px;
-  padding-bottom: 30px;
-  padding-left: 76px;
-  box-shadow: 0 1px 0 @gray, inset 0 1px 0 @gray;
+  position: relative;
+  border-top: 1px solid @gray-light;
 
   @media @tablet-width {
-    .no-indent;
-    min-height: 90px;
-    box-shadow: none;
+    border: none;
+    border-left: 1px solid @gray-light;
+    border-right: 1px solid @gray-light;
+  }
+
+  &:nth-of-type(n+5) {
+    display: none;
+
+    @media @desktop-width {
+      display: block;
+      border: none;
+    }
+  }
+
+  &--first {
+    border: none;
+
+    @media @tablet-width {
+      z-index: 32;
+    }
+
+    @media @desktop-width {
+      border-right: 1px solid @gray-light;
+    }
   }
 
   &--second {
+    border: none;
+
     @media @tablet-width {
-      margin-left: 20px;
+      z-index: 3;
+    }
+
+    @media @desktop-width {
+      border-left: 1px solid @gray-light;
+      border-right: 1px solid @gray-light;
     }
   }
 
   &--third {
     @media @tablet-width {
-      margin-left: auto;
-      width: 85px;
-      height: 90px;
+      margin-left: calc(100% - 370px);
+      order: -2;
+    }
+
+    @media @desktop-width {
+      margin-left: 313px;
+      order: 0;
     }
   }
 
   &--fourth {
     @media @tablet-width {
-      width: 230px;
-      height: 90px;
+      padding-left: 63px; //83-20=63
+      order: -1;
+      border-right: none;
+    }
+
+    @media @desktop-width {
+      order: 0;
     }
   }
 }
 
-.main-nav__link {
+.main-nav a {
   .no-linkstyle;
-  font-family: @font;
-  font-weight: 700;
-  color: @black;
-  font-size: 17px;
-  line-height: 24px;
-}
-
-.main-nav__search {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  padding-left: 23%;
   font-family: @font;
   font-weight: 700;
   color: @black;
@@ -74,25 +100,104 @@
   line-height: 24px;
 
   @media @tablet-width {
-    position: absolute;
-    text-indent: -1999px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.main-nav__item--first a,
+.main-nav__item--fifth a {
+  @media @tablet-width {
+    padding-left: 0;
+  }
+}
+
+.main-nav__search {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  padding-left: 23%;
+  font-family: @font;
+  font-weight: 700;
+  color: @black;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media @tablet-width {
+    font-size: 0;
+    padding: 0;
+    width: 82px;
+    background-color: transparent;
+  }
+}
+
+.main-nav__search-icon {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  opacity: 0.2;
+  top: 35px;
+  left: 32px;
+}
+
+.main-nav__basket-icon {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 18px;
+  opacity: 0.2;
+  top: 35px;
+  left: 32px;
+
+  @media @tablet-width {
+    right: 453px;
   }
 }
 
 .main-nav__toggle {
+  .no-indent;
   position: absolute;
   top: 30px;
   right: 30px;
-
   display: block;
-  width: 23px;
-  height: 23px;
+  cursor: pointer;
+  background: none;
+  border: none;
 
   @media @tablet-width {
     display: none;
   }
+}
 
-  &--catalog {
-    order: -1;
+//меню открыто
+.main-nav--opened .main-nav__toggle {
+  width: 21px;
+  height: 21px;
+  background-image: url("../../img/icon-menu-close.svg");
+}
+
+//меню закрыто
+.main-nav--closed .main-nav__toggle {
+  width: 20px;
+  height: 14px;
+  background-image: url("../../img/icon-menu-open.svg");
+}
+
+//открытие и закрытие меню
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 }
