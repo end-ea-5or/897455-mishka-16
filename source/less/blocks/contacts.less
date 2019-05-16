@@ -49,7 +49,7 @@
     right: 53px;
     width: 47px;
     height: 81px;
-    background-image: url("../../img/icon-flag.svg");
+    background-image: url("../img/icon-flag.svg");
 
     @media @tablet-width {
       display: block;
@@ -125,10 +125,8 @@
 
 .contacts__map {
   margin-top: 40px;
-
-  @media @tablet-width {
-    width: 100%;
-  }
+  min-width: 320px;
+  width: 100%;
 
   @media @desktop-width {
     .no-indent;
@@ -146,6 +144,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 230px;
+    font-size: 17px;
+    line-height: 20px;
   }
 
   @media @desktop-width {
