@@ -65,6 +65,18 @@
   }
 }
 
+.catalog__link {
+  align-self: center;
+
+  @media @tablet-width {
+    height: 334px;
+  }
+
+  @media @desktop-width {
+    height: auto;
+  }
+}
+
 .catalog__link-title {
   .no-linkstyle;
   color: @black;
@@ -72,19 +84,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-}
-
-.catalog__link-img img {
-  .no-linkstyle;
+  text-align: center;
 
   @media @tablet-width {
-    width: 334px;
-    height: 334px;
-  }
-
-  @media @desktop-width {
-    width: 316px;
-    height: 462px;
+    text-align: left;
   }
 }
 
@@ -126,7 +129,7 @@
 
 .catalog__basket {
   display: block;
-  background-image: url("../../img/icon-cart.svg");
+  background-image: url("../img/icon-cart.svg");
   opacity: 0.2;
   width: 20px;
   height: 19px;

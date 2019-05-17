@@ -51,7 +51,7 @@
   display: inline-block;
   width: 50%;
   height: 52px;
-  background-image: url("../../img/icon-left-arrow.svg");
+  background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #ececec;
@@ -61,7 +61,7 @@
   }
 
   &--rigth {
-    background-image: url("../../img/icon-right-arrow.svg");
+    background-image: url("../img/icon-right-arrow.svg");
     border-left: none;
   }
 }
@@ -84,10 +84,15 @@
     display: block;
     padding-top: 85px;
     padding-left: 50px;
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     font-size: 43px;
     line-height: 50px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 
   @media @desktop-width {

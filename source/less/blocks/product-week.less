@@ -117,6 +117,39 @@
   border-bottom: 1px solid @gray;
 }
 
+.product-week picture {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet-width {
+    width: 333px;
+    height: 404px;
+  }
+
+  @media @desktop-width {
+    .no-indent;
+    margin-top: -160px;
+    margin-left: 50px;
+    width: 525px;
+    height: 636px;
+    z-index: -1;
+  }
+}
+
+.product-week img {
+  @media @tablet-width {
+    width: 333px;
+    height: 404px;
+  }
+
+  @media @desktop-width {
+    width: 525px;
+    height: 636px;
+  }
+}
+
+/*
 .product-week__img {
   margin-top: 30px;
   margin-left: auto;
@@ -136,6 +169,7 @@
     z-index: -1;
   }
 }
+*/
 
 .product-week__price {
   display: block;

@@ -36,7 +36,7 @@
   width: 25px;
   height: 24px;
   opacity: 0.2;
-  background-image: url("../../img/icon-phone.svg");
+  background-image: url("../img/icon-phone.svg");
 
   @media @tablet-width {
     top: -10px;
@@ -49,7 +49,7 @@
   &--mail {
     width: 32px;
     height: 26px;
-    background-image: url("../../img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
@@ -251,56 +251,56 @@
       margin-right: 150px;
     }
   }
-}
 
-.field__input--circle + label::before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid @gray-dark;
-  border-radius: 50%;
-  background-color: @white;
-}
-
-.field__input--circle:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 14px;
-  width: 17px;
-  height: 17px;
-  background-color: @aqua-line;
-  border-radius: 50%;
-}
-
-.field__input--square + label::before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid @gray-dark;
-  background-color: @white;
-
-  @media @tablet-width {
-    background-color: transparent;
+  &--circle + label::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @gray-dark;
+    border-radius: 50%;
+    background-color: @white;
   }
-}
 
-.field__input--square:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 11px;
-  width: 22px;
-  height: 8px;
-  border-radius: 0;
-  border-left: 2px solid @black;
-  border-bottom: 2px solid @black;
-  background-color: transparent;
-  transform: rotate(-45deg);
+  &--circle:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 14px;
+    width: 17px;
+    height: 17px;
+    background-color: @aqua-line;
+    border-radius: 50%;
+  }
+
+  &--square + label::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @gray-dark;
+    background-color: @white;
+
+    @media @tablet-width {
+      background-color: transparent;
+    }
+  }
+
+  &--square:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    width: 22px;
+    height: 8px;
+    border-radius: 0;
+    border-left: 2px solid @black;
+    border-bottom: 2px solid @black;
+    background-color: transparent;
+    transform: rotate(-45deg);
+  }
 }

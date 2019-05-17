@@ -70,7 +70,7 @@
     left: 34px;
     width: 32px;
     height: 32px;
-    background-image: url("../../img/icon-video.svg");
+    background-image: url("../img/icon-video.svg");
 
     @media @tablet-width {
       top: 480px;
@@ -94,8 +94,9 @@
   }
 }
 
-.video__frame {
+.video picture {
   .no-indent;
+  position: relative;
   margin: 0 auto;
 
   @media @tablet-width {
@@ -107,16 +108,29 @@
   @media @desktop-width {
     margin-left: 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 80px;
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+    cursor: pointer;
+
+    @media @tablet-width {
+      top: 189px;
+      left: 283px;
+    }
+  }
 }
 
 .video__button {
   margin-top: 30px;
   margin-bottom: 30px;
-
-  @media @tablet-width {
-    font-size: 17px;
-    line-height: 16px;
-  }
+  font-size: 17px;
+  line-height: 16px;
 
   @media @desktop-width {
     margin-bottom: 60px;
