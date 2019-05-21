@@ -6,7 +6,12 @@
 
   @media @tablet-width {
     .no-indent;
-    margin-left: 100px;
+    margin-top: 5px;
+    margin-left: 110px;
+  }
+
+  @media @desktop-width {
+    margin-left: 70px;
   }
 }
 
@@ -17,6 +22,14 @@
 .social__item {
   display: inline-block;
   margin-left: 35px;
+
+  &:hover svg{
+    fill: #46c1ae;
+  }
+
+  &:active svg{
+    opacity: 0.3;
+  }
 
   &:first-of-type {
     margin: 0;

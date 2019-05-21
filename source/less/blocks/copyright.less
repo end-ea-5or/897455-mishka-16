@@ -1,22 +1,32 @@
 .copyright {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 
   @media @tablet-width {
     .no-indent;
+    margin-top: 12px;
   }
 }
 
-.copyright__text {
-  color: @black;
-  font-family: @font;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 18px;
+.copyright__link {
+  .no-linkstyle;
+  position: relative;
+  padding-right: 55px;
 
-  @media @tablet-width {
-    margin-right: 30px;
+  & svg {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    fill: #63d1bb;
+  }
+
+  &:hover svg{
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

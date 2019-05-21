@@ -1,16 +1,20 @@
 .button {
   .no-linkstyle;
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: 2px solid @gray-dark;
   font-family: @font;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
 
-  @media @tablet-width {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  &:hover {
+    background-color: @gray-dark;
+    color: @white;
+  }
+
+  &:active {
+    color: #787878;
   }
 }

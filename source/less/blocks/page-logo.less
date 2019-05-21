@@ -1,20 +1,35 @@
 .page-logo {
-  margin: 23px auto;
+  margin-top: 21px;
+  margin-bottom: 14px;
+  text-align: center;
 
   @media @tablet-width {
     margin: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 50px;
-    border-bottom: 1px solid @gray-light;
+    padding-top: 21px;
+    padding-bottom: 11px;
+    padding-left: 49px;
+    width: 20%;
+    text-align: left;
     z-index: 2;
   }
 
   @media @desktop-width {
     .no-indent;
-    margin: 0 auto;
-    padding-top: 25px;
+    text-align: center;
+    padding-top: 9px;
+    width: 100%;
     border: none;
+    z-index: 0;
+  }
+
+  & picture {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--catalog {
@@ -24,9 +39,18 @@
   &--footer {
     display: none;
 
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media @tablet-width {
       .no-indent;
       display: block;
+      width: 10%;
       background-color: transparent;
     }
   }

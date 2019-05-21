@@ -2,40 +2,50 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 58px;
-
-  @media @tablet-width {
-    margin-top: 50px;
-  }
+  margin-bottom: 63px;
 
   @media @desktop-width {
-    max-height: 550px;
+    margin-bottom: 106px;
+    padding-left: 679px;
+    min-height: 455px;
     flex-wrap: wrap;
+    border: 1px solid @gray;
   }
 }
 
 .video__contain {
   border: 1px solid @gray;
   border-top: none;
-  padding-top: 34px;
+  padding-top: 18px;
   padding-left: 34px;
   padding-right: 34px;
 
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media @tablet-width {
+    padding-top: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-top: none;
   }
 
   @media @desktop-width {
-    width: 25%;
-    border: none;
     margin-top: auto;
+    padding-top: 30px;
     padding-left: 80px;
+    border: none;
   }
 }
 
 .video__title {
   .no-indent;
-  padding-top: 30px;
+  padding-top: 21px;
   padding-bottom: 25px;
   padding-left: 90px;
   color: @black;
@@ -48,6 +58,8 @@
   border-bottom: none;
 
   @media @tablet-width {
+    padding-top: 37px;
+    padding-left: 107px;
     font-size: 20px;
     line-height: 24px;
     border-bottom: none;
@@ -73,7 +85,8 @@
     background-image: url("../img/icon-video.svg");
 
     @media @tablet-width {
-      top: 480px;
+      top: 488px;
+      left: 40px;
     }
 
     @media @desktop-width {
@@ -98,15 +111,19 @@
   .no-indent;
   position: relative;
   margin: 0 auto;
+  cursor: pointer;
 
   @media @tablet-width {
-    width: 668px; //для сетки
-    height: 455px; //для сетки
+    width: 668px;
+    height: 455px;
     order: -1;
   }
 
   @media @desktop-width {
-    margin-left: 0;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &::before {
@@ -116,23 +133,44 @@
     left: 80px;
     width: 101px;
     height: 77px;
-    background-image: url("../img/icon-play.svg");
-    cursor: pointer;
+    background-image: url("../img/play-icon.svg");
 
     @media @tablet-width {
       top: 189px;
       left: 283px;
     }
   }
+
+  &:hover::before {
+    top: 179px;
+    left: 273px;
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active::before {
+    top: 199px;
+    left: 293px;
+    width: 81px;
+    height: 62px;
+    opacity: 0.3;
+  }
 }
 
 .video__button {
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 30px;
   font-size: 17px;
   line-height: 16px;
 
+  @media @tablet-width {
+    margin-top: 35px;
+    margin-bottom: 46px;
+  }
+
   @media @desktop-width {
+    margin-top: 46px;
     margin-bottom: 60px;
+    width: 91%;
   }
 }

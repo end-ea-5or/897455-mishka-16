@@ -1,6 +1,13 @@
 .product-week {
-  margin-top: 60px;
-  padding-bottom: 73px;
+  padding-bottom: 40px;
+
+  @media @tablet-width {
+    padding-bottom: 70px;
+  }
+
+  @media @desktop-width {
+    padding-bottom: 90px;
+  }
 }
 
 .product-week__contain {
@@ -10,9 +17,8 @@
   &--first {
     @media @tablet-width {
       flex-direction: row;
-      margin-bottom: 55px;
+      margin-bottom: 49px;
     }
-
 
     @media @desktop-width {
       margin-top: 110px;
@@ -21,29 +27,29 @@
 
   &--second {
     @media @tablet-width {
-      max-height: 550px;
-      flex-wrap: wrap;
+      position: relative;
     }
 
     @media @desktop-width {
       margin-left: 175px;
-      max-height: 650px;
     }
   }
 }
 
 .product-week__title {
   .no-indent;
-  order: 1;
   text-transform: uppercase;
   font-family: @font;
   font-weight: 700;
   font-size: 17px;
   color: @aqua;
+  order: 1;
 
   @media @tablet-width {
     align-self: center;
-    margin-right: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 15px;
     width: 100px;
     line-height: 17px;
     text-align: center;
@@ -51,8 +57,8 @@
 
   @media @desktop-width {
     order: 0;
+    margin-left: 34px;
     margin-right: 0;
-    margin-left: 40px;
   }
 }
 
@@ -65,13 +71,14 @@
   color: @black;
 
   @media @tablet-width {
-    margin-right: auto;
+    margin-top: 20px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media @desktop-width {
-    margin-left: 30px;
+    margin-top: 11px;
+    margin-left: 36px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -79,7 +86,7 @@
 
 .product-week__text {
   .no-indent;
-  margin-top: 30px;
+  margin-top: 18px;
   line-height: 24px;
 
   @media @tablet-width {
@@ -96,7 +103,7 @@
 
 .product-week__properties {
   .no-indent;
-  margin-top: 30px;
+  margin-top: 16px;
   line-height: 20px;
   border-collapse: collapse;
 
@@ -115,65 +122,46 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid @gray;
+
+  @media @desktop-width {
+    padding-top: 0;
+    padding-bottom: 17px;
+  }
+
+  &:nth-of-type(2) {
+    padding-left: 18px;
+
+    @media @tablet-width {
+      padding-left: 0;
+    }
+  }
 }
 
 .product-week picture {
   margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 
   @media @tablet-width {
+    position: absolute;
+    top: -22px;
+    right: 0;
     width: 333px;
     height: 404px;
   }
 
   @media @desktop-width {
     .no-indent;
-    margin-top: -160px;
-    margin-left: 50px;
+    top: -152px;
+    right: 0;
     width: 525px;
     height: 636px;
     z-index: -1;
   }
 }
-
-.product-week img {
-  @media @tablet-width {
-    width: 333px;
-    height: 404px;
-  }
-
-  @media @desktop-width {
-    width: 525px;
-    height: 636px;
-  }
-}
-
-/*
-.product-week__img {
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media @tablet-width {
-    width: 333px;
-    height: 404px;
-  }
-
-  @media @desktop-width {
-    .no-indent;
-    margin-top: -160px;
-    margin-left: 50px;
-    width: 525px;
-    height: 636px;
-    z-index: -1;
-  }
-}
-*/
 
 .product-week__price {
   display: block;
-  margin-top: 30px;
+  margin-top: 13px;
   font-family: @font;
   font-weight: 700;
   font-size: 17px;
@@ -182,7 +170,7 @@
   text-align: center;
 
   @media @tablet-width {
-    margin-top: 50px;
+    margin-top: 54px;
     order: 0;
     width: 43%;
     font-size: 20px;
@@ -190,19 +178,20 @@
 
   @media @desktop-width {
     width: 33%;
-    margin-top: 95px;
+    margin-top: 106px;
   }
 }
 
 .product-week__button {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 17px;
   line-height: 20px;
   order: 1;
 
   @media @tablet-width {
-    order: 0;
+    margin-top: 33px;
     width: 43%;
+    order: 0;
   }
 
   @media @desktop-width {

@@ -1,5 +1,5 @@
 .site-nav {
-  margin-top: -75px;
+  margin-top: -70px;
   padding: 0;
   order: 2;
 
@@ -24,9 +24,22 @@
   position: relative;
   background-color: @aqua;
 
+  &:hover {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+
+  &:active a{
+    opacity: 0.3;
+  }
+
+  &:active::after{
+    opacity: 0.3;
+  }
+
   @media @tablet-width {
     .no-indent;
-    height: 120px; // для сетки
+    height: 120px;
     width: 50%;
   }
 
@@ -42,22 +55,30 @@
     width: 40px;
     height: 62px;
     opacity: 0.5;
-    background-image: url("../img/icon-interior.svg");
+    background-image: url("../img/interior-icon.svg");
+
+    @media @tablet-width {
+      top: 31px;
+    }
   }
 
   &--second::after {
     right: 27px;
     width: 60px;
     height: 60px;
-    background-image: url("../img/icon-toy.svg");
+    background-image: url("../img/toy-icon.svg");
+
+    @media @tablet-width {
+      right: 35px;
+    }
   }
 }
 
 .site-nav__item a {
   .no-linkstyle;
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   padding-left: 9%;
   font-family: @font;
   font-weight: 700;
@@ -66,8 +87,13 @@
   line-height: 24px;
 
   @media @tablet-width {
+    padding-left: 10%;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media @desktop-width {
+    padding-left: 7%;
   }
 }
 

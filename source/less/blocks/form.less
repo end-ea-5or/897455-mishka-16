@@ -1,5 +1,9 @@
 .form {
   padding-bottom: 20px;
+
+  @media @tablet-width{
+    padding-bottom: 12px;
+  }
 }
 
 .form-contain {
@@ -7,9 +11,20 @@
 
   &--gray {
     @media @tablet-width {
+      padding-bottom: 14px;
       max-width: none;
       background-color: @gray-light;
       border-top: 1px solid transparent; //чтобы не схлоппывались маргины
+    }
+
+    @media @desktop-width {
+      padding-bottom: 12px;
+    }
+  }
+
+  &--last-gray {
+    @media @tablet-width {
+      padding-bottom: 0;
     }
   }
 
@@ -23,32 +38,33 @@
     }
 
     @media @desktop-width {
-      margin-left: 185px;
+      margin-left: 175px;
     }
   }
 }
 
 .form__text {
   .no-indent;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
   font-size: 13px;
   line-height: 24px;
 
   @media @tablet-width {
     .no-indent;
-    margin-top: 68px;
+    margin-top: 76px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media @desktop-width {
-    margin-top: 112px;
+    margin-top: 126px;
     margin-left: 175px;
     margin-right: 193px;
   }
 
   &--bottom {
-    margin-top: 18px;
+    margin-top: 8px;
+    padding-bottom: 0;
     font-size: 14px;
     line-height: 16px;
 
@@ -59,19 +75,26 @@
 
     @media @desktop-width {
       margin-left: 0;
-      margin-right: 150px;
+      margin-right: 175px;
     }
   }
 }
 
 .form__button {
+  margin-top: 30px;
   margin-bottom: 55px;
   font-size: 17px;
   line-height: 16px;
   background-color: transparent;
 
   @media @tablet-width {
+    margin-top: 0px;
+    margin-bottom: 51px;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  @media @desktop-width {
+    margin-top: -6px;
   }
 }

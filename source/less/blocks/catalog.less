@@ -1,34 +1,75 @@
 .catalog {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 5px;
+
+  @media @tablet-width {
+    padding-top: 58px;
+  }
 
   @media @desktop-width {
-    padding-top: 80px;
+    padding-top: 108px;
   }
 }
 
 .catalog__contain {
+  width: 260px;
+  margin-top: -9px;
+  align-self: center;
+  border: 1px solid @gray;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media @tablet-width {
+    margin-top: 0;
     width: 50%;
   }
 
   @media @desktop-width {
+    margin-top: -9px;
+    padding-top: 9px;
     width: auto;
+    align-self: stretch;
   }
 }
 
 .catalog__contain-item {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-left: 30px;
+  margin-left: 27px;
   margin-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 23px;
+  border-top: 1px solid @gray;
+
+  @media @desktop-width {
+    padding-top: 23px;
+  }
 
   &--top {
+    padding-top: 19px;
+    padding-bottom: 18px;
     flex-direction: column;
-    border-bottom: 1px solid @gray;
+    justify-content: flex-start;
+    border: none;
+
+    @media @tablet-width {
+      padding-top: 25px;
+      min-height: 259px;
+      box-sizing: border-box;
+    }
+
+    @media @desktop-width {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      min-height: 112px;
+    }
   }
 }
 
@@ -38,27 +79,28 @@
   @media @desktop-width {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .catalog__item {
   display: flex;
   flex-direction: column;
-  border: 1px solid @gray;
   margin-bottom: 30px;
 
   @media @tablet-width {
     flex-direction: row;
+    margin-bottom: 52px;
   }
 
   @media @desktop-width {
     display: flex;
     flex-direction: column;
     width: 316px;
-    margin-right: 50px;
+    margin-right: 48px;
   }
 
-  &--last {
+  &:nth-of-type(3n) {
     @media @desktop-width {
       margin-right: 0;
     }
@@ -84,7 +126,14 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media @tablet-width {
     text-align: left;
@@ -104,7 +153,7 @@
 
 .catalog__description {
   .no-indent;
-  margin-top: 17px;
+  margin-top: 5px;
   font-size: 13px;
   line-height: 30px;
 
@@ -130,4 +179,13 @@
 .catalog__basket {
   display: block;
   opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -2,6 +2,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: auto 24px;
+  }
+
+  &--catalog {
+    &::after {
+      display: none;
+
+      @media @tablet-width {
+        display: block;
+      }
+    }
+  }
 }
 
 .page-header__wrapper {
@@ -25,7 +47,7 @@
     }
 
     @media @desktop-width {
-      margin-left: 800px;
+      display: block;
     }
   }
 }
@@ -37,10 +59,10 @@
 .page-header__title {
   .no-indent;
   display: block;
-  padding-top: 93px;
+  padding-top: 71px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 300px;
+  height: 280px;
   color: #010000;
   font-family: @font;
   font-weight: 700;
@@ -51,15 +73,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-top: 1px solid @gray-light;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
   }
 
   @media @tablet-width {
-    height: 746px;
-    margin-top: -61px;
-    padding-top: 219px;
+    height: 592px;
+    margin-top: -46px;
+    padding-top: 154px;
     padding-left: 120px;
     padding-right: 120px;
     font-size: 43px;
@@ -72,6 +95,8 @@
   }
 
   @media @desktop-width {
+    margin-top: -43px;
+    padding-top: 153px;
     padding-left: 266px;
     padding-right: 266px;
     font-size: 53px;
@@ -86,16 +111,17 @@
 
   &--catalog {
     height: auto;
-    padding-top: 75px;
+    padding-top: 70px;
     padding-bottom: 75px;
     background-color: @gray-light;
     background-image: none;
 
     @media @tablet-width {
-      padding-top: 100px;
+      padding-top: 96px;
     }
 
     @media @desktop-width {
+      padding-top: 91px;
       padding-bottom: 100px;
     }
   }
@@ -104,5 +130,10 @@
 .page-header__text {
   @media @tablet-width {
     margin-left: auto;
+  }
+
+  @media @desktop-width {
+    margin: 0;
+    margin-left: 815px;
   }
 }

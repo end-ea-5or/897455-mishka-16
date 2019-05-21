@@ -1,0 +1,111 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: calc(50vh - 168px);
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: @white;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+  box-sizing: border-box;
+  z-index: 11;
+
+  @media @tablet-width {
+    width: 566px;
+    left: calc(50vw - 288px);
+  }
+}
+
+.modal__bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.911);
+  z-index: 10;
+}
+
+.modal__title {
+  .no-indent;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__text {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+.modal__form {
+  margin-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media @tablet-width {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+}
+
+.modal__list {
+  .no-ulstyle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__label {
+  padding-top: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.modal__item input+label {
+  display: block;
+  width: 82px;
+  height: 52px;
+  border: 2px solid @gray;
+}
+
+.modal__item input:hover+label {
+  border: 2px solid #c7c7c7;
+}
+
+.modal__item input:checked+label {
+  border: 2px solid @aqua-line;
+}
+
+.modal__button {
+  margin-top: 31px;
+  margin-bottom: 46px;
+  width: 100%;
+  color: @white;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: @aqua;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__close {
+  display: none;
+}
+
+.modal__show {
+  display: flex;
+}

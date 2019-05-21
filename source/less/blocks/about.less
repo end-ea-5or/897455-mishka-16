@@ -1,11 +1,15 @@
 .about {
-  margin-top: 35px;
+  margin-top: 27px;
   font-family: @font;
   font-weight: 700;
   color: @black;
 
+  @media @tablet-width {
+    margin-top: 46px;
+  }
+
   @media @desktop-width {
-    margin-top: 70px;
+    margin-top: 64px;
     margin-left: 170px;
   }
 }
@@ -28,17 +32,12 @@
 
 .about__list {
   .no-ulstyle;
+  margin-top: 5px;
 
   @media @tablet-width {
+    margin-top: -5px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    max-height: 465px;
-  }
-
-  @media @desktop-width {
-    max-height: 500px;
-    align-content: flex-start;
   }
 }
 
@@ -47,11 +46,11 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 85px;
+  padding-top: 83px;
 
   @media @tablet-width {
     width: 45%;
-    padding-top: 105px;
+    padding-top: 110px;
     font-size: 20px;
     line-height: 22px;
   }
@@ -61,6 +60,10 @@
   }
 
   &:nth-of-type(n + 4) {
+    @media @tablet-width {
+      margin-left: 35px;
+    }
+
     @media @desktop-width {
       margin-left: 55px;
     }
@@ -70,65 +73,77 @@
     content: "";
     position: absolute;
     z-index: 2;
-    top: 30px;
-    left: 5px;
+    top: 27px;
+    left: 0;
 
     @media @tablet-width {
-      top: 50px;
+      top: 60px;
+    }
+  }
+
+  &--second {
+    @media @tablet-width {
+      order: 3;
+    }
+  }
+
+  &--third {
+    @media @tablet-width {
+      order: 5;
+    }
+  }
+
+  &--fourth {
+    @media @tablet-width {
+      order: 2;
+    }
+  }
+
+  &--fifth {
+    @media @tablet-width {
+      order: 4;
+    }
+  }
+
+  &--sixth {
+    @media @tablet-width {
+      order: 6;
     }
   }
 
   &--first::before {
     width: 32px;
     height: 37px;
-    background-image: url("../img/icon-feature-flower.svg");
+    background-image: url("../img/feature-flower-icon.svg");
   }
 
   &--second::before {
     width: 47px;
     height: 28px;
-    background-image: url("../img/icon-feature-money.svg");
+    background-image: url("../img/feature-money-icon.svg");
   }
 
   &--third::before {
     width: 34px;
     height: 28px;
-    background-image: url("../img/icon-feature-heart.svg");
+    background-image: url("../img/feature-heart-icon.svg");
   }
 
   &--fourth::before {
     width: 35px;
     height: 35px;
-    background-image: url("../img/icon-feature-ball.svg");
+    background-image: url("../img/feature-ball-icon.svg");
   }
 
   &--fifth::before {
     width: 55px;
     height: 24px;
-    background-image: url("../img/icon-feature-rocket.svg");
+    background-image: url("../img/feature-rocket-icon.svg");
   }
 
   &--sixth::before {
     width: 33px;
     height: 33px;
-    background-image: url("../img/icon-feature-gift.svg");
+    background-image: url("../img/feature-gift-icon.svg");
   }
-
-  /*
-  & svg {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 30px;
-    left: 5px;
-
-    @media @tablet-width {
-      top: 50px;
-    }
-
-    & path {
-      fill: @aqua;
-    }
-  }
-  */
 }

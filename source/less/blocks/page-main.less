@@ -1,5 +1,5 @@
 .page-main {
-  margin-top: 30px;
+  margin-top: 26px;
   font-family: @font;
   font-weight: 400;
   font-size: 15px;
@@ -8,11 +8,34 @@
 .page-main__wrapper {
   .wrapper;
 
-  &--product-week {
-    border-bottom: 2px solid @gray-light;
+  &--pattern {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: auto 6px;
+
+      @media @tablet-width {
+        height: 17px;
+        background-size: auto 17px;
+      }
+    }
   }
 
   &--reviews {
     border-bottom: 2px solid @gray-light;
+  }
+
+  &--contacts {
+    @media @desktop-width {
+      .no-indent;
+    }
   }
 }
