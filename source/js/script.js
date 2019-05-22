@@ -2,6 +2,8 @@ var basketLink = document.querySelectorAll(".button__modal");
 var popup = document.querySelector(".modal");
 var bg = document.querySelector(".modal__bg");
 var form = document.querySelector(".modal__form");
+var mapImg = document.querySelector(".contacts__map--img");
+var mapFrame = document.querySelector(".contacts__map");
 
 for (let i = 0; i < basketLink.length; i++) {
   var element = basketLink[i];
@@ -29,3 +31,8 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+if (mapImg) {
+  mapImg.classList.add("contacts__map--close");
+  mapFrame.classList.add("contacts__map--open");
+}

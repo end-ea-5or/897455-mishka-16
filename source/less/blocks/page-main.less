@@ -14,14 +14,16 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -20px;
       left: 0;
       width: 100%;
-      height: 6px;
+      height: 25px;
       background-image: url("../img/bg-zigzag-line.svg");
+      background-size: auto 6px;
       background-repeat: repeat-x;
 
       @media @tablet-width {
+        bottom: 0;
         height: 17px;
         background-size: auto 17px;
       }
@@ -35,6 +37,14 @@
   &--contacts {
     @media @desktop-width {
       .no-indent;
+    }
+  }
+
+  &--button {
+    @media @desktop-width {
+      position: absolute;
+      top: 357px;
+      left: 0;
     }
   }
 }
