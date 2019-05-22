@@ -1,10 +1,11 @@
-var link = document.querySelector(".button__modal");
+var basketLink = document.querySelectorAll(".button__modal");
 var popup = document.querySelector(".modal");
 var bg = document.querySelector(".modal__bg");
 var form = document.querySelector(".modal__form");
 
-if (link) {
-  link.addEventListener("click", function (evt) {
+for (let i = 0; i < basketLink.length; i++) {
+  var element = basketLink[i];
+  element.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal__show");
     bg.classList.add("modal__show");
@@ -13,9 +14,9 @@ if (link) {
 
 if (form) {
   form.addEventListener("submit", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal__show");
-      bg.classList.remove("modal__show");
+    evt.preventDefault();
+    popup.classList.remove("modal__show");
+    bg.classList.remove("modal__show");
   });
 }
 
