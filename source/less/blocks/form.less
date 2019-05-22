@@ -9,8 +9,13 @@
 .form-contain {
   .wrapper;
 
+  @media @tablet-width {
+    margin-bottom: 10px;
+  }
+
   &--gray {
     @media @tablet-width {
+      margin-bottom: 20px;
       padding-bottom: 14px;
       max-width: none;
       background-color: @gray-light;
@@ -24,6 +29,7 @@
 
   &--last-gray {
     @media @tablet-width {
+      margin-bottom: 0;
       padding-bottom: 0;
     }
   }
@@ -74,6 +80,7 @@
     }
 
     @media @desktop-width {
+      margin-top: 0;
       margin-left: 0;
       margin-right: 175px;
     }
@@ -89,12 +96,13 @@
 
   @media @tablet-width {
     margin-top: 0;
-    margin-bottom: 51px;
+    margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
   @media @desktop-width {
     margin-top: -6px;
+    margin-bottom: 30px;
   }
 }

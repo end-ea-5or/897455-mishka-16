@@ -41,14 +41,14 @@
           </li>
           <li class="main-nav__item  main-nav__item--third  main-nav__item--search">
             <label class="main-nav__search" for="search-form">
-              <svg>
+              <svg width="17.6" height="17.6">
                 <use xlink:href="#icon-search"></use>
               </svg>Поиск по сайту</label>
             <input class="visually-hidden  main-nav__input-search" type="search" id="search-form">
           </li>
           <li class="main-nav__item  main-nav__item--fourth">
             <a class="main-nav__basket-link" href="#">
-              <svg class="main-nav__basket-icon">
+              <svg width="20.294px" height="18.849px" class="main-nav__basket-icon">
                 <use xlink:href="#icon-cart"></use>
               </svg>Корзина: пока пуста</a>
           </li>
@@ -67,8 +67,9 @@
   </header>
 
   <main class="page-main">
-    <div class="form-contain">
-      <form class="form" method="get" action="https://echo.htmlacademy.ru">
+
+    <form class="form" method="get" action="https://echo.htmlacademy.ru">
+      <div class="form-contain">
         <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
           заказа и мы свяжемся
           с вами, чтобы уточнить детали.</p>
@@ -87,101 +88,95 @@
             </li>
           </ul>
         </fieldset>
-    </div>
-    <div class="form-contain  form-contain--gray">
-      <fieldset class="field  field--color">
-        <legend class="field__legend">Цвет</legend>
-        <ul class="field__list  field__list--flex">
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="white"
-              id="color-white" checked>
-            <label class="field__label" for="color-white">Белый</label>
-          </li>
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="gray"
-              id="color-gray" checked>
-            <label class="field__label" for="color-gray">Серый</label>
-          </li>
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="tiffany"
-              id="color-tiffany">
-            <label class="field__label" for="color-tiffany">«Тиффани»</label>
-          </li>
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="black"
-              id="color-black">
-            <label class="field__label" for="color-black">Черный</label>
-          </li>
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="pink"
-              id="color-pink">
-            <label class="field__label" for="color-pink">Розовый</label>
-          </li>
-          <li class="field__item  field__item--flex">
-            <input class="visually-hidden field__input  field__input--square" type="checkbox" name="orange"
-              id="color-orange">
-            <label class="field__label" for="color-orange">Оранжевый</label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
-    <div class="form-contain">
-      <fieldset class="field  field--fio">
-        <legend class="field__legend">ФИО</legend>
-        <ul class="field__list  field__list--fio">
-          <li class="field__item  field__item--fio">
-            <input class="field__input  field__input--fio" type="text" name="name-author" id="name-author"
-              placeholder="Введите ваше имя*" required>
-            <label class="field__label  field__label--fio" for="name-author">Имя:</label>
-          </li>
-          <li class="field__item  field__item--fio">
-            <input class="field__input  field__input--fio" type="text" name="surname-author" id="surname-author"
-              placeholder="Укажите фамилию*" required>
-            <label class="field__label  field__label--fio" for="surname-author">Фамилия:</label>
-          </li>
-          <li class="field__item  field__item--fio">
-            <input class="field__input  field__input--fio" type="text" name="patronymic-author" id="patronymic-author"
-              placeholder="Отчество, если желаете">
-            <label class="field__label  field__label--fio" for="patronymic-author">Отчество:</label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
-    <div class="form-contain  form-contain--gray  form-contain--last-gray">
-      <fieldset class="field">
-        <div class="field-contain">
+      </div>
+      <div class="form-contain  form-contain--gray">
+        <fieldset class="field  field--color">
+          <legend class="field__legend">Цвет</legend>
+          <ul class="field__list  field__list--flex">
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="white"
+                id="color-white" checked>
+              <label class="field__label" for="color-white">Белый</label>
+            </li>
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="gray"
+                id="color-gray" checked>
+              <label class="field__label" for="color-gray">Серый</label>
+            </li>
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="tiffany"
+                id="color-tiffany">
+              <label class="field__label" for="color-tiffany">«Тиффани»</label>
+            </li>
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="black"
+                id="color-black">
+              <label class="field__label" for="color-black">Черный</label>
+            </li>
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="pink"
+                id="color-pink">
+              <label class="field__label" for="color-pink">Розовый</label>
+            </li>
+            <li class="field__item  field__item--flex">
+              <input class="visually-hidden field__input  field__input--square" type="checkbox" name="orange"
+                id="color-orange">
+              <label class="field__label" for="color-orange">Оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="form-contain">
+        <fieldset class="field  field--fio">
+          <legend class="field__legend">ФИО</legend>
+          <ul class="field__list  field__list--fio">
+            <li class="field__item  field__item--fio">
+              <input class="field__input  field__input--fio" type="text" name="name-author" id="name-author"
+                placeholder="Введите ваше имя*" required>
+              <label class="field__label  field__label--fio" for="name-author">Имя:</label>
+            </li>
+            <li class="field__item  field__item--fio">
+              <input class="field__input  field__input--fio" type="text" name="surname-author" id="surname-author"
+                placeholder="Укажите фамилию*" required>
+              <label class="field__label  field__label--fio" for="surname-author">Фамилия:</label>
+            </li>
+            <li class="field__item  field__item--fio">
+              <input class="field__input  field__input--fio" type="text" name="patronymic-author" id="patronymic-author"
+                placeholder="Отчество, если желаете">
+              <label class="field__label  field__label--fio" for="patronymic-author">Отчество:</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="form-contain  form-contain--gray  form-contain--last-gray">
+        <fieldset class="field  field--data">
           <legend class="field__legend  field__legend--topline">Тел</legend>
           <input class="field__data" type="tel" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
             required>
           <svg class="field__icon" width="24.83" height="24.33">
             <use xlink:href="#icon-phone"></use>
           </svg>
-        </div>
-      </fieldset>
-      <fieldset class="field  field--email">
-        <div class="field-contain">
+        </fieldset>
+        <fieldset class="field  field--data  field--email">
           <legend class="field__legend  field__legend--topline">E-mail</legend>
           <input class="field__data" type="email" name="e-mail" id="e-mail" placeholder="Ваш Email*" required>
           <svg class="field__icon" width="32" height="32">
             <use xlink:href="#icon-mail"></use>
           </svg>
-        </div>
-      </fieldset>
-    </div>
-    <div class="form-contain">
-      <fieldset class="field  field--area">
-        <div class="field-contain field-contain--last">
+        </fieldset>
+      </div>
+      <div class="form-contain">
+        <fieldset class="field  field--data  field--add">
           <legend class="field__legend  field__legend--topline">Доп</legend>
           <textarea class="field__area" name="order wishes" id="order-wishes" rows="6"
             placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </div>
-      </fieldset>
-    </div>
+        </fieldset>
+      </div>
 
-    <div class="form-contain  form-contain--bottom">
-      <p class="form__text form__text--bottom">*Поля обязательны для заполнения</p>
-      <button class="button  form__button" type="submit">Отправить заказ</button>
-    </div>
+      <div class="form-contain  form-contain--bottom">
+        <p class="form__text form__text--bottom">*Поля обязательны для заполнения</p>
+        <button class="button  form__button" type="submit">Отправить заказ</button>
+      </div>
 
     </form>
   </main>
@@ -224,7 +219,8 @@
       </div>
 
       <div class="copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано<svg width="26.943px" height="34.09px">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано<svg width="26.943px"
+            height="34.09px">
             <use xlink:href="#icon-logo-htmlacademy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>

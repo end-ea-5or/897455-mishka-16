@@ -5,7 +5,7 @@ var form = document.querySelector(".modal__form");
 var mapImg = document.querySelector(".contacts__map--img");
 var mapFrame = document.querySelector(".contacts__map");
 
-for (let i = 0; i < basketLink.length; i++) {
+for (var i=0; i < basketLink.length; i++) {
   var element = basketLink[i];
   element.addEventListener("click", function (evt) {
     evt.preventDefault();
