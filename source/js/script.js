@@ -1,6 +1,6 @@
 var basketLink = document.querySelectorAll(".button__modal");
 var popup = document.querySelector(".modal");
-var bg = document.querySelector(".modal__bg");
+var bg = document.querySelector(".bg");
 var form = document.querySelector(".modal__form");
 var mapImg = document.querySelector(".contacts__map--img");
 var mapFrame = document.querySelector(".contacts__map");
@@ -10,7 +10,7 @@ for (var i=0; i < basketLink.length; i++) {
   element.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal__show");
-    bg.classList.add("modal__show");
+    bg.classList.add("bg__show");
   });
 }
 
@@ -18,7 +18,7 @@ if (form) {
   form.addEventListener("submit", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal__show");
-    bg.classList.remove("modal__show");
+    bg.classList.remove("bg__show");
   });
 }
 
@@ -26,7 +26,7 @@ if (bg) {
   bg.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal__show");
-    bg.classList.remove("modal__show");
+    bg.classList.remove("bg__show");
   });
 }
 
@@ -35,7 +35,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal__show")) {
       popup.classList.remove("modal__show");
-      bg.classList.remove("modal__show");
+      bg.classList.remove("bg__show");
     }
   }
 });
