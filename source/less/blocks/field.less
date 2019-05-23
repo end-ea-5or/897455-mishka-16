@@ -263,8 +263,8 @@
     outline: transparent;
   }
 
-  &:hover+svg,
-  &:focus+svg {
+  &:hover + svg,
+  &:focus + svg {
     fill: @aqua-line;
   }
 
@@ -332,7 +332,7 @@
     }
   }
 
-  &--circle+label::before {
+  &--circle + label::before {
     content: "";
     position: absolute;
     top: -11px;
@@ -350,17 +350,17 @@
     }
   }
 
-  &--circle:hover+label::before,
-  &--square:hover+label::before {
+  &--circle:hover + label::before,
+  &--square:hover + label::before {
     border: 2px solid @aqua-line;
   }
 
-  &--circle:active+label::before,
-  &--square:active+label::before {
+  &--circle:active + label::before,
+  &--square:active + label::before {
     opacity: 0.3;
   }
 
-  &--circle:checked+label::after {
+  &--circle:checked + label::after {
     content: "";
     position: absolute;
     top: 1px;
@@ -378,7 +378,7 @@
     }
   }
 
-  &--square+label::before {
+  &--square + label::before {
     content: "";
     position: absolute;
     top: -11px;
@@ -399,7 +399,7 @@
     }
   }
 
-  &--square:checked+label::after {
+  &--square:checked + label::after {
     content: "";
     position: absolute;
     top: 2px;
