@@ -8,10 +8,6 @@
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script>
-    document.createElement("picture");
-  </script>
-  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -241,29 +237,28 @@
     </div>
   </footer>
 
-  <div class="modal__bg">
-    <section class="modal">
-      <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
-      <span class="modal__text">Выберите размер:</span>
-      <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
-        <ul class="modal__list">
-          <li class="modal__item">
-            <input class="visually-hidden" type="radio" name="size" value="size S" id="S" checked>
-            <label class="modal__label" for="S">S</label>
-          </li>
-          <li class="modal__item">
-            <input class="visually-hidden" type="radio" name="size" value="size M" id="M" checked>
-            <label class="modal__label" for="M">M</label>
-          </li>
-          <li class="modal__item">
-            <input class="visually-hidden" type="radio" name="size" value="size L" id="L" checked>
-            <label class="modal__label" for="L">L</label>
-          </li>
-        </ul>
-        <button class="modal__button  button  button__modal-close" type="submit">Добавить</button>
-      </form>
-    </section>
-  </div>
+  <div class="modal__bg"></div>
+  <section class="modal">
+    <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
+    <span class="modal__text">Выберите размер:</span>
+    <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+      <ul class="modal__list">
+        <li class="modal__item">
+          <input class="visually-hidden" type="radio" name="size" value="size S" id="S" checked>
+          <label class="modal__label" for="S">S</label>
+        </li>
+        <li class="modal__item">
+          <input class="visually-hidden" type="radio" name="size" value="size M" id="M">
+          <label class="modal__label" for="M">M</label>
+        </li>
+        <li class="modal__item">
+          <input class="visually-hidden" type="radio" name="size" value="size L" id="L">
+          <label class="modal__label" for="L">L</label>
+        </li>
+      </ul>
+      <button class="modal__button  button  button__modal-close" type="submit">Добавить</button>
+    </form>
+  </section>
 
   <script>
     var navMain = document.querySelector('.main-nav');
@@ -282,6 +277,11 @@
     });
   </script>
   <script src="js/script.js"></script>
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script src="js/svgxuse.js" defer></script>
 </body>
 
 </html>

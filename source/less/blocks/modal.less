@@ -48,8 +48,8 @@
 
 .modal__form {
   margin-top: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: calc(30px + (100% - 320px) / 3);
+  padding-right: calc(30px + (100% - 320px) / 3);
 
   @media @tablet-width {
     padding-left: 108px;
@@ -72,18 +72,18 @@
   vertical-align: middle;
 }
 
-.modal__item input + label {
+.modal__item input+label {
   display: block;
   width: 82px;
   height: 52px;
   border: 2px solid @gray;
 }
 
-.modal__item input:hover + label {
+.modal__item input:hover+label {
   border: 2px solid #c7c7c7;
 }
 
-.modal__item input:checked + label {
+.modal__item input:checked+label {
   border: 2px solid @aqua-line;
 }
 

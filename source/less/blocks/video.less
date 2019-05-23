@@ -142,18 +142,28 @@
   }
 
   &:hover::before {
-    top: 179px;
-    left: 273px;
+    top: 27px;
+    left: 70px;
     width: 121px;
     height: 92px;
+
+    @media @tablet-width {
+      top: 179px;
+      left: 273px;
+    }
   }
 
   &:active::before {
-    top: 199px;
-    left: 293px;
+    top: 47px;
+    left: 90px;
     width: 81px;
     height: 62px;
     opacity: 0.3;
+
+    @media @tablet-width {
+      top: 199px;
+      left: 293px;
+    }
   }
 }
 

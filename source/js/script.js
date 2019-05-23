@@ -22,6 +22,14 @@ if (form) {
   });
 }
 
+if (bg) {
+  bg.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal__show");
+    bg.classList.remove("modal__show");
+  });
+}
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
