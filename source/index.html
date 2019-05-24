@@ -16,17 +16,18 @@
   </div>
   <header class="page-header">
     <h1 class="page-header__title">Милые штуки ручной работы&nbsp;для дома</h1>
-    <a class="page-logo" href="#">
+    <a class="logo">
       <picture>
         <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="page-logo__img" src="img/logo-mobile.svg" alt="Милые штуки ручной работы для дома">
+        <img class="logo__img" src="img/logo-mobile.svg" alt="Милые штуки ручной работы для дома">
       </picture>
     </a>
     <div class="page-header__wrapper  page-header__wrapper--nav">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
-        <button class="main-nav__toggle button-burger" type="button"><span class="visually-hidden">Открыть
-            меню</span></button>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle button-burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list ">
           <li class="main-nav__item  main-nav__item--first">
             <a class="main-nav__catalog-link" href="catalog.html">Каталог товаров</a>
@@ -72,7 +73,6 @@
   </header>
 
   <main class="page-main">
-
     <div class="page-main__wrapper  page-main__wrapper--pattern">
       <section class="product-week">
         <div class="product-week__contain  product-week__contain--first">
@@ -152,13 +152,13 @@
     </div>
 
     <section class="contacts">
-      <div class="page-main__wrapper  page-main__wrapper--contacts">
+      <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <table class="contacts__table">
           <tr>
             <td class="contacts__first-cell">e-mail:</td>
             <td>
-              <a class="contacts__emale" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             </td>
           </tr>
           <tr>
@@ -171,7 +171,7 @@
           </tr>
         </table>
       </div>
-      <picture class=".contacts__map  contacts__map--img">
+      <picture class="contacts__map-img">
         <source type="image/webp" media="(min-width: 1150px)"
           srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
@@ -184,7 +184,7 @@
       <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002867!2d30.320858715769422!3d59.93871916905457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sby!4v1558033694918!5m2!1sru!2sby"
         width="320" height="457" style="border:0" allowfullscreen></iframe>
-      <div class="page-main__wrapper   page-main__wrapper--button">
+      <div class="contacts__wrapper   contacts__wrapper--button">
         <a class="contacts__button  button" href="writeus.html">Напишите нам</a>
       </div>
     </section>
@@ -192,7 +192,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__contain">
-      <a class="page-logo  page-logo--footer" href="#">
+      <a class="logo  logo--footer" href="#">
         <svg width="101.615px" height="34.056px">
           <use xlink:href="#icon-logo-footer"></use>
         </svg>
@@ -256,26 +256,9 @@
           <label class="modal__label" for="L">L</label>
         </li>
       </ul>
-      <button class="modal__button  button  button__modal-close" type="submit">Добавить</button>
+      <button class="modal__button  button" type="submit">Добавить</button>
     </form>
   </section>
-
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
   <script src="js/picturefill.js" async></script>
   <script src="js/svgxuse.js" defer></script>
   <script src="js/script.js"></script>
